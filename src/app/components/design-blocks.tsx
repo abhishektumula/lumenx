@@ -4,7 +4,7 @@ export const DottedBlocks = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "w-100 h-100 bg-[radial-gradient(circle,var(--color-red-300)_1px,transparent_2px)] bg-size-[12px_12px]",
+        "bg-[radial-gradient(circle,var(--color-dotted)_1px,transparent_2px)] bg-size-[12px_12px]",
         className,
       )}
     ></div>

@@ -1,3 +1,4 @@
+import { Container } from "./components/container";
 import {
   AngledLineBlocks,
   DottedBlocks,
@@ -5,17 +6,13 @@ import {
   HorizontalLineBlocks,
   VerticalLineBlocks,
 } from "./components/design-blocks";
+import { Home } from "./components/Home";
+import { ThemeToggle } from "./components/theme-toggle";
 
 export default function HomePage() {
   return (
     <div className="w-full min-h-screen">
-      <div className="flex items-center justify-center max-w-5xl mx-auto gap-4">
-        <DottedBlocks />
-        <HorizontalLineBlocks />
-        <VerticalLineBlocks />
-        <GridBlocks />
-        <AngledLineBlocks />
-      </div>
+      <Home />
     </div>
   );
 }
