@@ -7,7 +7,8 @@ import { ThemeToggle } from "../theme-toggle";
 const links = [
   { title: "Home", href: "/" },
   { title: "Projects", href: "/projects" },
-  { title: "Experience", href: "/#experience" },
+  // { title: "Experience", href: "/#experience" },
+  { title: "Journey", href: "/journey" },
 ];
 
 const ScrollProgress = () => {

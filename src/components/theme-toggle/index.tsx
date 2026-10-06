@@ -2,11 +2,12 @@
 import { cn } from "@/util/cn";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const ThemeToggle = ({ className }: { className?: string }) => {
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -17,6 +18,11 @@ export const ThemeToggle = ({ className }: { className?: string }) => {
   }
 
   const handleChange = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/click.mp3");
+    }
+    audioRef.current.currentTime = 0;
+    audioRef.current.play();
     console.log("changed");
     setTheme(theme === "dark" ? "light" : "dark");
   };

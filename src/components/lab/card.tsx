@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, spring } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { lab_type } from ".";
@@ -55,7 +55,11 @@ export const LabCard = ({ details }: { details: lab_type }) => {
                 y: 0,
               }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{
+                type: "tween",
+                duration: 0.5,
+                delay: 0.1,
+              }}
               className="bg-background hidden md:block p-1 rounded-lg border border-border border-dashed absolute right-0 top-0 z-10 translate-x-1/2"
             >
               <Image
@@ -63,12 +67,12 @@ export const LabCard = ({ details }: { details: lab_type }) => {
                 alt={`${details.name} preview`}
                 width={720}
                 height={720}
-                className="h-auto rounded-sm w-55"
+                className="h-auto rounded-sm w-60"
               />
               <motion.p
-                initial={{ opacity: 0, filter: "blur(4px)" }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                transition={{ duration: 0.2, delay: 0.3 }}
+                initial={{ opacity: 0, filter: "blur(4px)", x: -10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
+                transition={{ duration: 0.2 }}
                 className="text-xs font-display text-secondary pt-1"
               >
                 {`${details.name} Preview`}

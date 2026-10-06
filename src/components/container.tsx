@@ -10,12 +10,7 @@ export const Container = ({
   border?: boolean;
 }) => {
   return (
-    <div
-      className={cn(
-        "mx-auto w-full md:max-w-4xl relative p-1 md:p-2",
-        className,
-      )}
-    >
+    <div className={cn("mx-auto w-full md:max-w-4xl relative p-2", className)}>
       {border && (
         <div className="absolute top-0 left-0 h-full w-[2px] bg-border" />
       )}

@@ -6,10 +6,13 @@ import {
   IconBrandJavascript,
   IconBrandPython,
   IconBrandReact,
+  IconBrandTerraform,
   IconBrandTypescript,
   IconFileAnalytics,
   IconFileAnalyticsFilled,
+  IconPresentationAnalyticsFilled,
   IconRobotFace,
+  IconUserCircle,
 } from "@tabler/icons-react";
 import { Header } from "../Home/header";
 import { pillReq } from "../pill";
@@ -54,6 +57,40 @@ export const Experience = () => {
         {
           title: "Python",
           icon: <IconBrandPython className="size-4 text-secondary" />,
+          href: "https://github.com/",
+          className: "",
+        },
+        {
+          title: "K8's",
+          icon: <IconBrandAws className="size-4 text-secondary" />,
+          href: "https://github.com/",
+          className: "",
+        },
+        {
+          title: "Jenkins",
+          icon: <IconUserCircle className="size-4 text-secondary" />,
+          href: "https://github.com/",
+          className: "",
+        },
+        {
+          title: "Linux",
+          icon: (
+            <IconPresentationAnalyticsFilled className="size-4 text-secondary" />
+          ),
+          href: "https://github.com/",
+          className: "",
+        },
+        {
+          title: "Ansible",
+          icon: (
+            <IconPresentationAnalyticsFilled className="size-4 text-secondary" />
+          ),
+          href: "https://github.com/",
+          className: "",
+        },
+        {
+          title: "Terraform",
+          icon: <IconBrandTerraform className="size-4 text-secondary" />,
           href: "https://github.com/",
           className: "",
         },

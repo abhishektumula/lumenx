@@ -68,7 +68,7 @@ export const ProjectSection = () => {
       id="project"
       className="w-full scroll-mt-8 dark:selection:bg-white dark:selection:text-black selection:bg-black selection:text-white overflow-hidden"
     >
-      <Container className="min-h-[200vh]" border={false}>
+      <Container className="h-auto" border={false}>
         <DottedBlock className="w-full h-60" />
         <Header>
           <h1>Projects</h1>

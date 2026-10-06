@@ -19,7 +19,9 @@ export const PillDesign = ({ data }: { data: pillReq }) => {
       href={data.href ? data.href : "/"}
     >
       {data.icon}
-      <p className="text-md text-secondary font-sans">{data.title}</p>
+      <p className="text-xs md:text-md text-secondary font-sans">
+        {data.title}
+      </p>
     </Link>
   );
 };

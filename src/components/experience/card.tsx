@@ -1,20 +1,28 @@
 "use client";
 import { IconCode, IconLayoutNavbarExpandFilled } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { PillDesign } from "../pill";
 import { experience_type } from ".";
 
 export const ExperienceCard = ({ details }: { details: experience_type }) => {
   const [show, setShow] = useState<boolean>(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   return (
     <div
-      className="w-full p-2 flex flex-col hover:bg-neutral-300/20 dark:hover:bg-neutral-700/20 rounded-md"
-      onClick={() => setShow(!show)}
+      className="w-full p-2 flex flex-col hover:bg-neutral-300/20 dark:hover:bg-neutral-700/20 rounded-md group"
+      onClick={() => {
+        if (!audioRef.current) {
+          audioRef.current = new Audio("/click.mp3");
+        }
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+        setShow(!show);
+      }}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-start gap-4">
-          <div className="md:h-2 md:w-2 h-1 w-1 rounded-full bg-border" />
+          <div className="md:h-2 md:w-2 h-1 w-1 rounded-full bg-border group-hover:bg-neutral-600 group-hover:dark:bg-neutral-500" />
           <p className="font-display font-medium text-md md:text-lg text-primary">
             {details.name}
           </p>

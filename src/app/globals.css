@@ -9,7 +9,7 @@
   --secondary: var(--color-neutral-600);
   --border: var(--color-neutral-300);
   --hborder: var(--color-neutral-600);
-  --dotts: var(--color-neutral-200);
+  --dotts: var(--color-neutral-300);
 }
 
 .dark {
@@ -20,7 +20,7 @@
   --secondary: var(--color-neutral-500);
   --border: var(--color-neutral-800);
   --hborder: var(--color-neutral-600);
-  --dotts: var(--color-neutral-800);
+  --dotts: var(--color-neutral-700);
 }
 
 @theme inline {
@@ -34,9 +34,10 @@
   --font-mono: var(--font-geist-mono);
   --color-dotted: var(--dotts);
   --font-inter: var(--font-inter-normal);
-  --font-google: var(--font-google-sans-code);
-  --font-display: var(--font-geist-pixel);
+  --font-display: var(--font-inter-normal);
   --color-hborder: var(--hborder);
+  --font-quote: var(--font-quote-sans);
+  --font-signature: var(--font-signature);
 }
 
 body {
