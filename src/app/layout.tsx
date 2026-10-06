@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Google_Sans, Google_Sans_Code, Inter } from "next/font/google";
+import {
+  Geist,
+  Geist_Pixel,
+  Google_Sans,
+  Google_Sans_Code,
+  Inter,
+} from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/providers/theme-provider";
+import { NavBar } from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +27,9 @@ export const googleSansCode = Google_Sans_Code({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-export const googleSans = Google_Sans({
-  variable: "--font-google-sans",
+export const geistPixle = Geist_Pixel({
+  variable: "--font-geist-pixel",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,10 +42,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       suppressHydrationWarning
       lang="en"
-      className={`${geistSans.variable} ${inter.variable} ${googleSansCode.variable} ${googleSans.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${inter.variable} ${googleSansCode.variable} ${geistPixle.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Provider>{children}</Provider>
+        <Provider>
+          {children}
+          <NavBar />
+        </Provider>
       </body>
     </html>
   );

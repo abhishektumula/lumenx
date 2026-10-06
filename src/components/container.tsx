@@ -12,15 +12,15 @@ export const Container = ({
   return (
     <div
       className={cn(
-        "mx-auto w-full md:max-w-2xl relative p-1 md:p-2",
+        "mx-auto w-full md:max-w-3xl relative p-1 md:p-2",
         className,
       )}
     >
       {border && (
-        <div className="absolute top-0 left-0 h-full w-px bg-border hidden md:block" />
+        <div className="absolute top-0 left-0 h-full w-[2px] bg-border" />
       )}
       {border && (
-        <div className="absolute top-0 right-0 h-full w-px bg-border hidden md:block" />
+        <div className="absolute top-0 right-0 h-full w-[2px] bg-border hidden md:block" />
       )}
       {children}
     </div>

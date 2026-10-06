@@ -1,5 +1,6 @@
 import {
   IconBrandGithub,
+  IconBrandLinkedin,
   IconBrandMedium,
   IconBrandX,
 } from "@tabler/icons-react";
@@ -31,9 +32,15 @@ export const Socials = () => {
       href: "https://github.com/tokens2bytes",
       className: "",
     },
+    {
+      title: "LinkedIn",
+      icon: <IconBrandLinkedin className="size-4 text-secondary" />,
+      href: "https://in.linkedin.com/in/tumulaabhishek?trk=people-guest_people_search-card",
+      className: "",
+    },
   ];
   return (
-    <div className="w-full flex items-center justify-start flex-wrap gap-2 md:gap-4">
+    <div className="w-full flex items-center justify-start flex-wrap gap-2 p-1 md:p-2">
       {details.map((each, index) => (
         <div key={each.title}>
           <PillDesign data={each} />
