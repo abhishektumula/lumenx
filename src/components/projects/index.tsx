@@ -36,7 +36,7 @@ export const ProjectSection = () => {
       desc: "A pre-configured full-stack starter with database, ORM, server actions, and essential tooling already wired up. Clone it, install, and start building.",
       live: false,
       soon: true,
-      previewImage: "/npm-safe.png",
+      previewImage: "/no-preview.png",
     },
 
     {
@@ -44,7 +44,7 @@ export const ProjectSection = () => {
       desc: "A collection of front-end and back-end skills focused on improving design taste, development workflows, productivity, and efficiency..",
       live: false,
       soon: true,
-      previewImage: "/no-preview.png",
+      previewImage: "/skill-ao.png",
     },
     {
       title: "Comet",
