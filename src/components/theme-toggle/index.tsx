@@ -2,9 +2,19 @@
 import { cn } from "@/util/cn";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export const ThemeToggle = ({ className }: { className?: string }) => {
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <button className="p-1 rounded">{/* empty placeholder */}</button>;
+  }
 
   const handleChange = () => {
     console.log("changed");

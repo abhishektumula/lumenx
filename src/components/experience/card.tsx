@@ -1,5 +1,5 @@
 "use client";
-import { IconCode } from "@tabler/icons-react";
+import { IconCode, IconLayoutNavbarExpandFilled } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { PillDesign } from "../pill";
@@ -12,11 +12,16 @@ export const ExperienceCard = ({ details }: { details: experience_type }) => {
       className="w-full p-2 flex flex-col hover:bg-neutral-300/20 dark:hover:bg-neutral-700/20 rounded-md"
       onClick={() => setShow(!show)}
     >
-      <div className="flex items-center justify-start gap-4">
-        <div className="md:h-2 md:w-2 h-1 w-1 rounded-full bg-border" />
-        <p className="font-display font-medium text-md md:text-lg text-primary">
-          {details.name}
-        </p>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center justify-start gap-4">
+          <div className="md:h-2 md:w-2 h-1 w-1 rounded-full bg-border" />
+          <p className="font-display font-medium text-md md:text-lg text-primary">
+            {details.name}
+          </p>
+        </div>
+        <IconLayoutNavbarExpandFilled
+          className={`size-4 text-secondary ${show ? "rotate-180" : ""} transition duration-600`}
+        />
       </div>
       <div className="mt-2 w-full flex items-center justify-between cursor-pointer ">
         <div className="flex items-center justify-start gap-4">
